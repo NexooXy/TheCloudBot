@@ -1,19 +1,19 @@
 {
-  "ownerNumber": ["628978378100@s.whatsapp.net"], 
+  "ownerNumber": ["6285607831410@s.whatsapp.net"], 
   "ownerName": ["ʀᴜʟʟ"], 
   "botName": "𝑪𝒍𝒐𝒖𝒅𝑩𝒐𝒕", 
   "youtubeOwner": "https://youtube.com", 
   "web": "https://lolhuman.xyz/", 
-  "donasiQris": "https://i.ibb.co/CVMrYwV/Qris-Tsuyuzaki.jpg",
-  "donasiPulsa": "0895638102488", 
-  "footer": "© Tsuyuzakiメ", 
-  "fake": "© Create Misaki MD", 
-  "sessionName": "misaki",
+  "donasiQris": "https://telegra.ph/file/878419a6d50ac90eb252b.jpg",
+  "donasiPulsa": "0", 
+  "footer": "ᴄ ʟ ᴏ ᴜ ᴅ  ʙ ᴏ ᴛメ", 
+  "fake": "Cʟᴏᴜᴅ Bᴏᴛ", 
+  "sessionName": "session.data",
   "pathimg": "./media/misaki.jpg",
   "gamewaktu": 90,
-  "limitCount": 30,
+  "limitCount": 50,
   "gcount": {
 	"prem": 99999,
-	"user": 20
+	"user": 50
   }
 }
