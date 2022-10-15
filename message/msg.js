@@ -169,9 +169,9 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
            url = url.videos[0].url
            hxz.youtube(url).then(async(data) => {
            var button = [
-		        	{ urlButton: { displayText: `Source`, url : `https://youtu.be/${data.id}` } },
-	         		{ quickReplyButton: { displayText: `🎧 Audio (${data.size_mp3})`, id: `${prefix}ytmp3 ${url}` } },
-	         		{ quickReplyButton: { displayText: `🎥 Video (${data.size})`, id: `${prefix}ytmp4 ${url}` } },
+		        	{ urlButton: { displayText: `Link`, url : `https://youtu.be/${data.id}` } },
+	         		{ quickReplyButton: { displayText: `Via Audio (${data.size_mp3})`, id: `${prefix}ytmp3 ${url}` } },
+	         		{ quickReplyButton: { displayText: `Via Video (${data.size})`, id: `${prefix}ytmp4 ${url}` } },
 		]
              conn.sendMessage(from, { caption: `*Title :* ${data.title}\n*Quality :* ${data.quality}\n*Url :* https://youtu.be/${data.id}`, image: {url: data.thumb}, templateButtons: button, footer: 'Pilih Salah Satu Button Dibawah', mentions: [sender]} )
            }).catch((e) => {
@@ -236,8 +236,8 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 		    { urlButton: { displayText: `Youtube`, url : `${setting.youtubeOwner}` } },
 		    { urlButton: { displayText: `Website`, url : `${setting.web}` } },
 			{ callButton: { displayText: `Contact Me`, phoneNumber: `${setting.ownerNumber}` } },
-			{ quickReplyButton: { displayText: `🧑 Owner`, id: `${prefix}owner` } },
-			{ quickReplyButton: { displayText: `💰 Donasi`, id: `${prefix}donate` } }
+			{ quickReplyButton: { displayText: `Pemilik Bot`, id: `${prefix}owner` } },
+			{ quickReplyButton: { displayText: `Donasi`, id: `${prefix}donate` } }
 		]
 		const buttonsMenu = [
 		    { urlButton: { displayText: `Youtube`, url : `${setting.youtubeOwner}` } },
@@ -281,7 +281,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 			addBalance(sender, htgm, balance)
 		    var texttg = `*Selamat ${pushname} Jawaban Kamu Benar 🎉*\n\nJawaban : ${getJawabanGame(from, tebakgambar)}\nHadiah : ${htgm} balance\nKode Game : ${kode}\n\nIngin bermain lagi? Pencet Tombol Dibawah`
 			var kus = [
-			{ quickReplyButton: { displayText: `Main Lagi`, id: `${prefix}tebakgambar` } },
+			{ quickReplyButton: { displayText: `Main Lagi (⁠≧⁠▽⁠≦⁠)`, id: `${prefix}tebakgambar` } },
 		]
 			 conn.sendMessage(from, { text: texttg, templateButtons: kus, footer: 'TEBAK GAMBAR', mentions: [sender]} )  
 		    tebakgambar.splice(getGamePosi(from, tebakgambar), 1)
@@ -309,7 +309,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 			addBalance(sender, htgm, balance)
 		    var texttg = `*Selamat ${pushname} Jawaban Kamu Benar 🎉*\n\nJawaban : ${getJawabanGame(from, ao)}\nHadiah : ${htgm} balance\nKode Game : ${kode}\n\nIngin bermain lagi? Pencet Tombol Dibawah`
 			var kus = [
-			{ quickReplyButton: { displayText: `Main Lagi`, id: `${prefix}asahotak` } },
+			{ quickReplyButton: { displayText: `Main Lagi (⁠≧⁠▽⁠≦⁠)`, id: `${prefix}asahotak` } },
 		]
 			 conn.sendMessage(from, { text: texttg, templateButtons: kus, footer: 'ASAH OTAK', mentions: [sender]} )  
 		    ao.splice(getGamePosi(from, ao), 1)
@@ -323,7 +323,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 			addBalance(sender, htgm, balance)
 		    var texttg = `*Selamat ${pushname} Jawaban Kamu Benar 🎉*\n\nJawaban : ${getJawabanGame(from, tj)}\nHadiah : ${htgm} balance\nKode Game : ${kode}\n\nIngin bermain lagi? Pencet Tombol Dibawah`
 			var kus = [
-			{ quickReplyButton: { displayText: `Main Lagi`, id: `${prefix}tebakjenaka` } },
+			{ quickReplyButton: { displayText: `Main Lagi (⁠≧⁠▽⁠≦⁠)`, id: `${prefix}tebakjenaka` } },
 		]
 			 conn.sendMessage(from, { text: texttg, templateButtons: kus, footer: 'TEBAK JENAKA', mentions: [sender]} )  
 		    tj.splice(getGamePosi(from, tj), 1)
@@ -395,12 +395,12 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 var teks = `──「 𝔻𝕠𝕟𝕒𝕤𝕚 𝔹𝕠𝕥 」──
 
 Hi ${pushname} 👋🏻
-𝗗𝗮𝗻𝗮 : 𝙎𝙘𝙖𝙣 𝙌𝙧𝙞𝙨 𝙙𝙞 𝘼𝙩𝙖𝙨
-𝗣𝘂𝗹𝘀𝗮 : +62895638102488
+
+𝙎𝙝𝙤𝙥𝙚𝙥𝙖𝙮 : 𝙉𝙤𝙢𝙤𝙧 𝘽𝙤𝙩
 
 𝙏𝙚𝙧𝙞𝙢𝙖𝙠𝙖𝙨𝙞𝙝 𝘽𝙪𝙖𝙩 𝙆𝙖𝙢𝙪 𝙔𝙖𝙣𝙜 𝙎𝙪𝙙𝙖𝙝 𝙈𝙖𝙪 𝘿𝙤𝙣𝙖𝙨𝙞 𝙐𝙣𝙩𝙪𝙠 𝙋𝙚𝙧𝙠𝙚𝙢𝙗𝙖𝙣𝙜𝙖𝙣 𝘽𝙤𝙩 𝙄𝙣𝙞
 𝙏𝙝𝙖𝙣𝙠𝙨 𝙎𝙪𝙨𝙖𝙝 𝙈𝙖𝙪 𝘿𝙤𝙣𝙖𝙨𝙞`
- conn.sendMessage(from, { caption: teks, image: {url: `${setting.donasiQris}`}, templateButtons: donasibut, footer: 'DONASI UNTUK PERKEMBANGAN BOT MD', mentions: [sender]} )
+ conn.sendMessage(from, { caption: teks, image: {url: `${setting.donasiQris}`}, templateButtons: donasibut, footer: 'DONASI UNTUK CLOUD BOT', mentions: [sender]} )
 			    break
 case prefix+'infobot':
   case prefix+'inforobot':
@@ -419,11 +419,9 @@ Haii, aku adalah *${setting.botName}*, Yang bisa membantu anda untuk membuat sti
 
 ===================
 Thanks To
-- Ifran / Rtwone
-- Christian ID
-- Tsuyuzakiメ
-- Penyedia Rest Api
-- Istri Anime`
+- 𝘈𝘳𝘢𝘢
+- 𝘙𝘶𝘭𝘭
+- 𝘞𝘩𝘢𝘵𝘴𝘢𝘱𝘱`
 
 conn.sendMessage(from, { caption: caption, image: pp_bot }, {quoted: fdoc})
 break
@@ -435,7 +433,7 @@ break
 			case prefix+'cekprem':
             case prefix+'cekpremium':
                 if (!isPremium) return reply(`Kamu bukan user premium, kirim perintah *${prefix}daftarprem* untuk membeli premium`)
-                if (isOwner) return reply(`Lu owner bego!`)
+                if (isOwner) return reply(`Kamu Owner kak!`)
                 if (_prem.getPremiumExpired(sender, premium) == "PERMANENT") return reply(`PERMANENT`)
                 let cekvip = ms(_prem.getPremiumExpired(sender, premium) - Date.now())
                 let premiumnya = `*Expire :* ${cekvip.days} day(s) ${cekvip.hours} hour(s) ${cekvip.minutes} minute(s)`
@@ -533,7 +531,7 @@ break
                      reply(mess.wait)
                      webp2mp4File(`./${rand1}`).then(async(data) => {
                        fs.unlinkSync(`./${rand1}`)
-                       conn.sendMessage(from, {caption: `*Nih Kak ${pushname} Sudah Jadi*`, video: await getBuffer(data.data) }, { quoted: fdoc })
+                       conn.sendMessage(from, {caption: `*𝘕𝘪𝘩 𝘬𝘢𝘬 ${pushname} 𝘜𝘥𝘢𝘩 𝘑𝘢𝘥𝘪*`, video: await getBuffer(data.data) }, { quoted: fdoc })
                        limitAdd(sender, limit)
                      })
                    }
@@ -549,8 +547,8 @@ break
 			      conn.sendMessage(from, {
 				   video: { url: data.medias[0].url },
 				   caption: `${data.title}\n\nKamu bisa mengubahnya menjadi Vidio Tanpa Watermark atau Audio, pencet tombol dibawah untuk mengubahnya!`,
-				   buttons: [{buttonId: `${prefix}tiktoknowm ${args[1]}`, buttonText: { displayText: "Without Watermark" }, type: 1 },
-					{buttonId: `${prefix}tiktokaudio ${args[1]}`, buttonText: { displayText: "Audio" }, type: 1 }],
+				   buttons: [{buttonId: `${prefix}tiktoknowm ${args[1]}`, buttonText: { displayText: "𝘛𝘢𝘯𝘱𝘢 𝘞𝘢𝘵𝘦𝘳𝘮𝘢𝘳𝘬" }, type: 1 },
+					{buttonId: `${prefix}tiktokaudio ${args[1]}`, buttonText: { displayText: "𝘈𝘶𝘥𝘪𝘰" }, type: 1 }],
 				   footer: `${setting.ownerName}`
 			      }, { quoted: msg })
 				  limitAdd(sender, limit)
@@ -617,7 +615,7 @@ case prefix+'ytmp3':
 			    if (!args[1].includes('youtu.be') && !args[1].includes('youtube.com')) return reply(mess.error.Iv)
 			    reply(mess.wait)
 				y2mateA(q).then( data => {
-					var capt = `📛 *Title :* ${data[0].judul}\n🔰 *Size Audio :* ${data[0].size}\n\n_Tunggu sebentar audio akan di kirim...._`
+					var capt = `📛 *𝘑𝘜𝘋𝘜𝘓 :* ${data[0].judul}\n🔰 *𝘚𝘐𝘡𝘌 𝘈𝘜𝘋𝘐𝘖 :* ${data[0].size}\n\n_Tunggu sebentar audio akan di kirim...._`
 					conn.sendMessage(from, {caption: capt, image: {url: data[0].thumb}}, {quoted: fdoc}) 
 					
 					conn.sendMessage(from, { document: { url: data[0].link }, fileName: `${data[0].judul}.mp3`, mimetype: 'audio/mp3' }, { quoted: fdoc })
@@ -1175,7 +1173,7 @@ case prefix+'cecanchina':
 				if (args.length < 2) return reply(`Kirim perintah ${command} teks`)
 				await conn.groupUpdateDescription(from, q)
 			    .then( res => {
-			      reply(`Sukses`)
+			      reply(`ᴅᴏɴᴇ`)
 				}).catch(() => reply(mess.error.api))
 				break
 			case prefix+'group': case prefix+'grup':
@@ -1419,7 +1417,7 @@ case prefix+'add':
 
 			default:
 			if (!isGroup && isCmd) {
-				reply(`Command belum tersedia, coba beberapa hari kedepan yaa! _^`)
+				reply(`ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʙᴇʟᴜᴍ ᴛᴇʀsᴇᴅɪᴀ ᴀᴛᴀᴜ sᴇᴅᴀɴɢ ᴇʀʀᴏʀ, ᴄᴏʙᴀ ʟᴀɢɪ ʟᴀɪɴ ᴋᴀʟɪ`)
 			}
 		}
 	} catch (err) {
